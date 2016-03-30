@@ -10,13 +10,31 @@ namespace Pruebageometrica
     {
         static void Main(string[] args)
         {
+            geometria.RECTANGULO Rectangulo;
+           
 
             geometria.MiColor UnColor;
             UnColor = geometria.MiColor.Rojo;
-            UnColor = (geometria.MiColor)22;
+            // UnColor = (geometria.MiColor)22;
 
+            
             Console.WriteLine(UnColor);
-            Console.ReadLine();
+            switch (UnColor)
+
+            {
+                case geometria.MiColor.Rojo:
+                    break;
+                case geometria.MiColor.Verde:
+                    break;
+                case geometria.MiColor.Azul:
+                    break;
+                case geometria.MiColor.Blanco:
+                    break;
+                default:
+                    break;
+            }
+            geometria.RECTANGULO.MostrarRectangulo(Rectangulo);
+            Console.ReadKey();
 
         }
     }

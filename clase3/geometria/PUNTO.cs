@@ -9,13 +9,28 @@ namespace geometria
     class PUNTO
     {
 
-        public int uno;
-        public int dos;
+        private int X;
+        private int Y;
 
-            public PUNTO (PUNTO uno , PUNTO dos)//y de un punto x del otro
+
+            public PUNTO (int valorX , int valorY)//y de un punto x del otro
             {
+
+                this.X = valorX;
+                this.Y = valorY;
             
             
+            }
+            public int DevolverX()
+            {
+
+                return this.X; 
+            
+            }
+            public int DevolverY()
+            {
+
+                return this.Y;
             
             }
 

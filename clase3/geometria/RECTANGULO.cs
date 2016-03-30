@@ -9,19 +9,40 @@ namespace geometria
     class RECTANGULO
     {
 
-        public PUNTO vertice1;
-        public PUNTO vertice2;
-        public PUNTO vertice3;
-        public PUNTO vertice4;
-        public MiColor ColorDelRectangulo;
+        private PUNTO vertice1;
+        private PUNTO vertice2;
+        private PUNTO vertice3;
+        private PUNTO vertice4;
+        private MiColor ColorDelRectangulo;
+        private float Superficie; 
 
-        public RECTANGULO(PUNTO vertice1 , PUNTO vertice3 , MiColor ColorDelRectangulo)
-        { 
-        
-           
+        public RECTANGULO(PUNTO verticeUno , PUNTO verticeTres , MiColor ColorDelRectangulo)
+        {
+
+            this.vertice1 = verticeUno;
+            this.vertice3 = verticeTres;
+
+            this.vertice2 = new PUNTO(this.vertice3.DevolverX() , this.vertice1.DevolverY());
+
+            this.vertice4 = new PUNTO(this.vertice1.DevolverX(), this.vertice3.DevolverY());
         
         }
+        private void CalcularSuperficie()
+        {
         
+        float Base =Math.Abs(this.vertice3.DevolverX() - this.vertice4.DevolverX());
+        float Altura = this.vertice1.DevolverY() - this.vertice3.DevolverY();
+
+        this.Superficie = Base * Altura;
+            
+        
+        }
+        public static void MostrarRectangulo(RECTANGULO Rectangulo)
+        {
+        
+        Console.WriteLine(Rectangulo);
+
+        }
 
 
     }
